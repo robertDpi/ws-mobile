@@ -23,6 +23,9 @@ Clone the git repo - `git clone git@github.com:gneatgeek/Qwik-Start.git` - or [d
     * There are a few variables defined in the main.scss file which make changing the template quick and easy.
     * The main file serves as a home for variables and mixins; it imports all the other segments as include files which are denoted as _filename.scss
 * This template currently only handles one level of dropdown. I might add a second level in the future.
+* The file `htaccess` must be renamed to `.htaccess` in order to function.
+    * As stated in the `htaccess` file: ".htaccess files are an overhead, this logic should be in your Apache config if possible: [Read the docs](httpd.apache.org/docs/2.2/howto/htaccess.html)"
+    * I changed the filename to keep strange .htaccess related issues from popping up right away. Check it out and use what you need/want.
 * Please contribute by [forking][fk] and sending a pull request.
 
 [fk]: http://help.github.com/forking/
