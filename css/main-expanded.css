@@ -1,4 +1,26 @@
 /* ==========================================================================
+   Master SASS file. http://sass-lang.com/
+   This file serves to setup variables, mixins, and functions to be used
+   through all of the include files. It also serves as an easy to read
+   organizer of all the CSS components to the template. When compiled
+   it will create a master.css including all the styles from the seperate
+   include files. This approach improves readability and code seperation
+   while also creating a fully compact css file.
+   
+   The compile command I use:
+   sass --watch sass/:css --style compressed
+   Note that the --watch parameter may be ommitted for a 1 time compile.
+   ========================================================================== */
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+/* ==========================================================================
+   Imports
+   ========================================================================== */
+/* ==========================================================================
    HTML5 Boilerplate styles - h5bp.com
    ========================================================================== */
 html, button, input, select, textarea {
@@ -80,8 +102,21 @@ body {
   background-color: #29297f;
 }
 
+a {
+  color: #5d5db7;
+}
+a:hover {
+  color: #b75d8a;
+}
+
 .footer-container, .main aside {
   border-top: 20px solid #29297f;
+}
+.footer-container .gc-cs-link, .footer-container a, .main aside .gc-cs-link, .main aside a {
+  color: #bdbdea;
+}
+.footer-container a:hover, .main aside a:hover {
+  color: #eaeabd;
 }
 
 .header-container, .footer-container, .main aside {

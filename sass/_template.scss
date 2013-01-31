@@ -29,8 +29,26 @@ body {
   background-color : darken($baseColor, 10%);
 }
 
+a {
+  color : mix($bgColor, $baseColor, 20%);
+  
+  &:hover {
+    color : adjust-hue(mix($bgColor, $baseColor, 20%), 90deg);
+  }
+}
+
 .footer-container, .main aside {
   border-top : 20px solid darken($baseColor, 10%);
+
+  .gc-cs-link, a {
+    color : lighten($baseColor, 40%);
+  }
+  
+  a {
+    &:hover {
+      color : adjust-hue(lighten($baseColor, 40%), 180deg);
+    }
+  }
 }
 
 .header-container, .footer-container, .main aside {
