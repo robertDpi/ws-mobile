@@ -13,11 +13,14 @@ Clone the git repo - `git clone git@github.com:gneatgeek/Qwik-Start.git` - or [d
 * Menu button for smaller screens keeps navigation from cluttering up your limited space.
 * Mobile first responsive design
 * [Sassy CSS](http://sass-lang.com/) instead of vanilla CSS
-* Simple sleek design with drop-down menus in mind.
+* Simple, sleek design with drop-down menus in mind.
 
 ## Notes
 
-* SASS was used to make the CSS cleaner, more readable, and more dynamic. I left an expanded compiled version of pure CSS in the CSS folder for those who don't want to mess with SASS.
-** Changing the color scheme is super easy. Just edit the $baseColor variable in sass/main.scss and the scheme will dynamically update based on the color you specify.
-** There are a few variables defined in the main.scss file which make changing the template quick and easy.
-** The main file serves as a home for variables and mixins, it imports all the other segments as include files which are denoted as _filename.scss
+* SASS was used to make the CSS cleaner, more maintainable, and more dynamic.
+    * I left an expanded compiled version of vanilla CSS in the css/ folder for those who don't want to mess with SASS.
+    * Changing the color scheme is super easy. Just edit the $baseColor variable in sass/main.scss and the scheme will dynamically update based on the color you specify.
+    * There are a few variables defined in the main.scss file which make changing the template quick and easy.
+    * The main file serves as a home for variables and mixins; it imports all the other segments as include files which are denoted as _filename.scss
+* This template currently only handles one level of dropdown. I might add a second level in the future.
+* Please contribute by [forking][fk] and sending a [pull request][pr].
