@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Master SASS file. http://sass-lang.com/
+   This file serves to setup variables, mixins, and functions to be used
+   through all of the include files. It also serves as an easy to read
+   organizer of all the CSS components to the template. When compiled
+   it will create a master.css including all the styles from the seperate
+   include files. This approach improves readability and code seperation
+   while also creating a fully compact css file.
+   
+   The compile command I use:
+   sass --watch sass/:css --style compressed
+   Note that the --watch parameter may be ommitted for a 1 time compile.
+   ========================================================================== */
+  
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+  
+$fontFamily     : Helvetica, Helvetica Neue, Arial, sans-serif;
+
+$baseColor      : #3535a6;
+$bgColor        : #FFF;  // White seems to work best, but feel free to change it.
+$selectionColor : mix($baseColor, $bgColor, 25%);
+
+$menuHeight     : 38px;     // Min 26, Max 
+$mSize          : 575px;    // Minimum width to stop mobile style navigation
+
+$aTrans         : 0.75s;    // Transition speed (menu nav 30% this speed)
+
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+@mixin borderRadius($params) {
+  -webkit-border-radius : $params;
+  -moz-border-radius    : $params;
+  -o-border-radius      : $params;
+  border-radius         : $params;
+}
+
+@mixin linear-gradient($from, $to) {
+  background : -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+  background : -moz-linear-gradient(top, $from, $to);
+  background : -o-linear-gradient(top, $from, $to);
+  background : -ms-linear-gradient(top, $from, $to);
+  background : linear-gradient(top, $from, $to);
+}
+
+@mixin radial-gradient($pos, $shape, $inner, $outer) {
+  background-image : -webkit-radial-gradient($pos, $shape, $inner 0%, $outer 100%);
+  background-image : -moz-radial-gradient($pos, $shape, $inner 0%, $outer 100%);
+  background-image : -o-radial-gradient($pos, circle, $inner 0%, $outer 100%);
+  background-image : radial-gradient($pos, $shape, $inner 0%, $outer 100%);
+}
+
+@mixin transAll($speed) {
+  -webkit-transition : all $speed;
+  -moz-transition    : all $speed;
+  -o-transition      : all $speed;
+  -ms-transition     : all $speed;
+  transition         : all $speed;
+}
+  
+/* ==========================================================================
+   Imports
+   ========================================================================== */
+  
+@import "h5bp";
+@import "template";
+@import "custom";
+@import "media_queries";
+@import "helpers";
+@import "print";

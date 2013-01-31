@@ -1,0 +1,140 @@
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: $mSize) {
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+  
+  #menu-toggle {
+    display : none;
+  }
+  
+  #topnav {
+    ul {
+      display    : block;
+      list-style : none;
+      margin     : 0;
+      padding    : 0;
+
+      &>:nth-child(n+1) {
+        padding-right : 1px;
+      }
+
+      &>:last-child { 
+        padding-right : 0; 
+        border-right  : 1px solid adjust-hue(lighten($baseColor, 30%), 20deg);
+      }
+
+      li {
+        border-left : 1px solid adjust-hue(lighten($baseColor, 30%), 20deg);
+        float       : left;
+        position    : relative;
+        display     : inline-block;
+
+        a {
+          padding : 0 10px;
+          width   : auto;
+          margin  : 0;
+
+          @include linear-gradient($baseColor, darken($baseColor, 10%));
+
+          &:hover {
+            background-color : darken($baseColor, 5%);
+
+            @include linear-gradient($baseColor, darken($baseColor, 18%));
+          }
+
+          &:active {
+            outline : none;
+
+            @include linear-gradient(darken($baseColor, 18%), $baseColor);
+          }
+        }
+
+        &:hover > ul {
+          visibility : visible;
+          opacity    : 1;
+          top        : $menuHeight;
+        }
+
+        ul {
+          position   : absolute;
+          left      : -1px;               // Switch to a right rule if you float the main nav right!
+          top        : $menuHeight + 10;  // Firefox has a bug and will not transition default values.
+          visibility : hidden;
+          opacity    : 0;
+          display    : block;
+          z-index    : 1;
+
+          @include transAll($aTrans * 0.30);
+
+          &>:nth-child(n+1) {
+            padding-bottom : 1px;
+            padding-right  :  0;
+          }
+
+          &>:last-child {
+            padding-bottom : 0;
+          }
+
+          li {
+            width            : 100%;
+            padding-left     : 10px;
+            padding-right    : 10px !important;
+            background-color : adjust-hue(lighten($baseColor, 30%), 20deg);
+
+            a {
+              width   : 100%;
+              margin  : 0 -10px;
+              padding : 0  10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+  .nav-container, .main aside {
+        -webkit-box-shadow : 0 5px 10px #aaa;
+           -moz-box-shadow : 0 5px 10px #aaa;
+                box-shadow : 0 5px 10px #aaa;
+  }
+
+  .title {
+    float : left;
+  }
+    
+  .main {
+    article {
+      float: left;
+      width: 57%;
+    }
+
+    aside {
+      float: right;
+      width: 28%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1140px) {
+
+/* ===============
+    Max Width
+   =============== */
+
+    .wrapper {
+        width  : 1026px; /* 1140px - 10% for margins */
+        margin : 0 auto;
+    }
+}

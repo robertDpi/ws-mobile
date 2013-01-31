@@ -1,0 +1,105 @@
+/* ==========================================================================
+   Template Styles
+   Note that these are the mobile styles. The other styles can be located
+   in the media queries segment.
+   ========================================================================== */
+  
+body {
+  font       : 16px/26px $fontFamily;
+  background : $bgColor;
+}
+
+.wrapper {
+  width  : 90%;
+  margin : 0 5%;
+}
+
+#menu-toggle {
+  background-color : lighten($baseColor, 5%);
+  border-radius    : 8px;
+  color            : #fff;
+  width            : 100%;
+  cursor           : pointer;
+  display          : inline-block;
+  padding          : 15px 0;
+  text-align       : center;
+}
+
+.nav-container {
+  background-color : darken($baseColor, 10%);
+}
+
+.footer-container, .main aside {
+  border-top : 20px solid darken($baseColor, 10%);
+}
+
+.header-container, .footer-container, .main aside {
+  background : $baseColor;
+}
+
+.title {
+  color : white;
+}
+
+#topnav {
+  position   : relative;
+  bottom     : 0;
+  min-height : $menuHeight;
+
+  ul {
+    display : none;
+    padding : 10px 0;
+    margin  : 0;
+
+    li {
+      font-family    : $fontFamily;
+      font-size      : 13px;
+      letter-spacing : 1px;
+      text-align     : center;
+      display        : block;
+
+      a {
+        white-space      : nowrap;
+        height           : $menuHeight;
+        line-height      : $menuHeight;
+        width            : 90%;
+        margin           : 10px 0;
+        padding          : 5px 0;
+        color            : white;
+        background-color : lighten($baseColor, 5%);
+        display          : inline-block;
+        text-decoration  : none;
+      }
+      
+      ul {
+        display: none;
+      }
+    }
+  }
+}
+
+.main { 
+  padding : 30px 0;
+  
+  article h1 {
+    font-size : 2em;
+  }
+  
+  aside {
+    color   : white;
+    padding : 0px 5% 10px;
+  }
+}
+
+.footer-container footer {
+  color   : white;
+  padding : 20px 0;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+  padding-top : 20px;
+}
