@@ -5,7 +5,7 @@ Qwik Start is an [Initializr](http://www.initializr.com/) inspired mobile friend
 
 ## Quick start
 
-See the [demo](http://gneatgeek.github.com/qwik-start/)!
+See the [demo](http://gneatgeek.github.io/qwik-start/)!
 
 Clone the git repo - `git clone git@github.com:gneatgeek/Qwik-Start.git` - or [download the current tag][tag].
 
